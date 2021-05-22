@@ -1,6 +1,6 @@
 # language_getx
 
-A language manger using GetX
+A Language Manager using GetX
 
 ## Getting Started
 
