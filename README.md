@@ -29,18 +29,18 @@ Map<int, dynamic> toJson() {
 </code></pre>
 
 ### Step 3:
-Finally add the **variable** to the class with the **required** syntax.
+Finally add the **variable** to the class with the **"required"** syntax.
 <pre lang="javascript"><code>
 const LabelsAppModel({
     required this.title,
   });
 </code></pre>
 The **required** syntax will create the first **MAGIC**, where it will show errors in **labels.dart** and **locales.dart** files.
-This error is created from the polymorphism of the classes by using the LabelsAppModel() in both of this files.
-The error is a form of reminder for the developer to add in the the relevant key-value pair for the translation.
+This error is created from the polymorphism of the classes by using the **LabelsAppModel()** in both of this files.
+The error is a form of reminder for the developer to add in the the relevant **key-value pair** for the translation.
 
 ### Step 3.1:
-Go to labels.dart file in the translations folder and fix the error by adding the "key" for the translation.
+Go to **labels.dart** file in the **translations folder** and fix the error by adding the **"key"** for the translation.
 <pre lang="javascript"><code>
 static const LabelsAppModel app = const LabelsAppModel(
     title: 'app_title',
@@ -48,7 +48,7 @@ static const LabelsAppModel app = const LabelsAppModel(
 </code></pre>
 
 ### Step 3.2:
-Go to locales.dart file in the translations folder and fix the error by adding the "value" for the translation.
+Go to **locales.dart** file in the **translations folder** and fix the error by adding the **"value"** for the translation.
 <pre lang="javascript"><code>
 static Map<String, String> en = LocaleModel(
     app: LabelsAppModel(
@@ -69,7 +69,7 @@ static Map<String, String> pt = LocaleModel(
  ).toJson();
 </code></pre>
 
-The toJson() for the LocaleModel(): locale_model.dart in the models folder, is the second MAGIC where it links the "key" in the labels.dart file and the "value" in the locales.dart file into a MAP for the translation to happen in app_translation.dart that is in the translations folder.
+The **toJson()** for the **LocaleModel()**: **locale_model.dart** in the **models folder**, is the second **MAGIC** where it links the **"key"** in the **labels.dart** file and the **"value"** in the **locales.dart** file into a **MAP {key: value}** for the translation to happen in **app_translation.dart** that is in the **translations folder**.
 <pre lang="javascript"><code>
 Map<String, String> toJson() {
     var data = <String, String>{};
