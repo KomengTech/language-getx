@@ -2,6 +2,37 @@
 
 A Language Translations Management App using GetX to support the development process.
 
+## Setup:
+Setup by adding **GetMaterialApp()** in the **main.dart** and **AppTranslation()** in the **app_translation.dart**. This app will have three translations.
+<pre lang="javascript"><code>
+main.dart
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      title: 'Language GetX',
+      debugShowCheckedModeBanner: false,
+      locale: Locale('en'),
+      translationsKeys: AppTranslation.translations,
+      home: HomeScreen(),
+    );
+  }
+}
+</code></pre>
+
+<pre lang="javascript"><code>
+app_translation.dart
+
+class AppTranslation {
+  static Map<String, Map<String, String>> translations = {
+    LanguageCode.kEnglish: Locales.en,
+    LanguageCode.kChinese: Locales.zh,
+    LanguageCode.kPortuguese: Locales.pt,
+  };
+}
+</code></pre>
+
 ## Adding Translation:
 To add a new translation is a 3 step process. 
 
@@ -112,18 +143,6 @@ Map<String, String> toJson() {
 
     return data;
   }
-</code></pre>
-
-<pre lang="javascript"><code>
-app_translation.dart
-
-class AppTranslation {
-  static Map<String, Map<String, String>> translations = {
-    LanguageCode.kEnglish: Locales.en,
-    LanguageCode.kChinese: Locales.zh,
-    LanguageCode.kPortuguese: Locales.pt,
-  };
-}
 </code></pre>
 
 ## Usage:
