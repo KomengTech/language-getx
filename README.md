@@ -162,32 +162,6 @@ class HomeScreen extends StatelessWidget {
 }
 </code></pre>
 
-## Adding Additional More Translation:
-You can add more translation variable following the example below for the **labels_home_model.dart** file.
-<pre lang="javascript"><code>
-labels_home_model.dart
-
-class LabelsHomeModel {
-  const LabelsHomeModel({
-    required this.title,
-    required this.name,
-    required this.email,
-  });
-
-  final String title;
-  final String name;
-  final String email;
-
-  Map<int, dynamic> toJson() {
-    return {
-      1: title,
-      2: name,
-      3: email,
-    };
-  }
-}
-</code></pre>
-
 ## Adding Additional Translation Model:
 To add another label model you can add the model in the **locale_model.dart** file. For example adding a labels home model:
 <pre lang="javascript"><code>
@@ -222,6 +196,32 @@ class LocaleModel {
     });
 
     return data;
+  }
+}
+</code></pre>
+
+## Adding More Translation Variables:
+You can add more translation variable following the example below for the **labels_home_model.dart** file.
+<pre lang="javascript"><code>
+labels_home_model.dart
+
+class LabelsHomeModel {
+  const LabelsHomeModel({
+    required this.title,
+    required this.name,
+    required this.email,
+  });
+
+  final String title;
+  final String name;
+  final String email;
+
+  Map<int, dynamic> toJson() {
+    return {
+      1: title,
+      2: name,
+      3: email,
+    };
   }
 }
 </code></pre>
