@@ -34,7 +34,7 @@ class AppTranslation {
 </code></pre>
 
 ## Adding Translation:
-To add a new translation is a 3 step process. 
+To add a new translation is a *3 Step Process**. 
 
 You start by going to either the **labels_app_model.dart** or **labels_home_model.dart** or **labels_settings_model.dart** in the **models folder**.
 
