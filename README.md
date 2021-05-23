@@ -73,7 +73,7 @@ const LabelsAppModel({
 </code></pre>
 The **required** syntax will create the first **MAGIC**, where it will show errors in **labels.dart** and **locales.dart** files.
 This error is created from the polymorphism of the classes by using the **LabelsAppModel()** in both of this files.
-The error is a form of reminder for the developer to add in the the relevant **key-value pair** for the translation.
+The error is a **Form of Reminder** for the developer to add in the the relevant **key-value pair** for the translation.
 <pre lang="javascript"><code>
 labels_app_model.dart
 
