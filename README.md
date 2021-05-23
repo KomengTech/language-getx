@@ -6,7 +6,7 @@ Added some polymorphism in the classes for error checking management for the tra
 
 This translation management is meant for bigger app with multiple screens as you can tag each screen to a translation model.
 
-For example if you have 3 screens: **AppScreen()**, **HomeScreen()** or **SettingsScreen()**. 
+For example if you have 3 screens: **AppScreen()**, **HomeScreen()** and **SettingsScreen()**. 
 
 You can tag each translation model to the separate screens: **labels_app_model.dart** or **labels_home_model.dart** or **labels_settings_model.dart** in the **models folder**.
 
