@@ -1,6 +1,6 @@
 # Getting Started
 
-A Language Translations Management App using GetX to support the development process. 
+An In-App Static Translation Management App using GetX to support the development process. 
 
 Added some polymorphism in the classes for error checking management for the translations files. 
 
