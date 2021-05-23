@@ -2,8 +2,9 @@
 
 A Language Translations Management App using GetX to support the development process.
 
-## Getting Started
+# Getting Started
 
+## Add Translation:
 To add a new translation is a 3 step process. 
 
 You start by going to either the **labels_app_model.dart** or **labels_home_model.dart** or **labels_settings_model.dart** in the **models folder**.
@@ -127,7 +128,7 @@ class AppTranslation {
 }
 </code></pre>
 
-### Usage:
+## Usage:
 After the setup, to use the variable you can add the translation in as **Labels.app.title.tr**, the **.tr** is a GetX function that translate the value.
 <pre lang="javascript"><code>
 home_screen.dart
@@ -144,7 +145,7 @@ class HomeScreen extends StatelessWidget {
 }
 </code></pre>
 
-## Adding Additional Translation Model
+## Adding Additional Translation Model:
 To add another label model you can add the model in the **locale_model.dart** file. For example adding a labels home model:
 <pre lang="javascript"><code>
 locale_model.dart
