@@ -10,7 +10,6 @@ For this app, we only have the HomeScreen() but will use all three label models 
 
 ### Step 1:
 For this example go to labels_app_model.dart, add a variable to the model.
-
 <pre lang="javascript"><code>
 final String title;
 </code></pre>
