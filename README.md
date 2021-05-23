@@ -44,6 +44,23 @@ const LabelsAppModel({
 The **required** syntax will create the first **MAGIC**, where it will show errors in **labels.dart** and **locales.dart** files.
 This error is created from the polymorphism of the classes by using the **LabelsAppModel()** in both of this files.
 The error is a form of reminder for the developer to add in the the relevant **key-value pair** for the translation.
+<pre lang="javascript"><code>
+labels_app_model.dart
+
+class LabelsAppModel {
+  const LabelsAppModel({
+    required this.title,
+  });
+
+  final String title;
+
+  Map<int, dynamic> toJson() {
+    return {
+      1: title,
+    };
+  }
+}
+</code></pre>
 
 ### Step 3.1:
 Go to **labels.dart** file in the **translations folder** and fix the error by adding the **"key"** for the translation.
