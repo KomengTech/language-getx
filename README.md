@@ -126,6 +126,24 @@ class AppTranslation {
   };
 }
 </code></pre>
+
+### Usage:
+After the setup, to use the variable you can add the translation in as **Labels.app.title.tr**, the **.tr** is a GetX function that translate the value.
+<pre lang="javascript"><code>
+home_screen.dart
+
+class HomeScreen extends StatelessWidget {
+ @override
+  Widget build(BuildContext context) {
+   return Scaffold(
+    appBar: AppBar(
+     title: Text(Labels.app.title.tr),
+    ),
+   );
+  }
+}
+</code></pre>
+
 ## Adding Additional Translation Model
 To add another label model you can add the model in the **locale_model.dart** file. For example adding a labels home model:
 <pre lang="javascript"><code>
