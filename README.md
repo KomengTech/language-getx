@@ -1,10 +1,8 @@
-# language_getx
+# Getting Started
 
 A Language Translations Management App using GetX to support the development process.
 
-# Getting Started
-
-## Add Translation:
+## Adding Translation:
 To add a new translation is a 3 step process. 
 
 You start by going to either the **labels_app_model.dart** or **labels_home_model.dart** or **labels_settings_model.dart** in the **models folder**.
