@@ -1,6 +1,8 @@
 # Getting Started
 
-A Language Translations Management App using GetX to support the development process. Added some polymorphism in the classes for error checking management for the translations files. The app UI design follows a Settings Screen.
+A Language Translations Management App using GetX to support the development process. 
+Added some polymorphism in the classes for error checking management for the translations files. 
+The app UI design follows a Settings Screen.
 
 ## Setup:
 Setup by adding **GetMaterialApp()** in the **main.dart** and **AppTranslation()** in the **app_translation.dart**. This app will have three translations.
