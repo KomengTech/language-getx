@@ -6,20 +6,20 @@ A Language Translations Management App using GetX to support the development pro
 
 To add a new translation is a 3 step process. 
 
-You start by going to either the labels_app_model.dart or labels_home_model.dart or labels_settings_model.dart in the models folder.
+You start by going to either the **labels_app_model.dart** or **labels_home_model.dart** or **labels_settings_model.dart** in the **models folder**.
 
-This is depending on which screen you want to add the translation to: AppScreen(), HomeScreen() or SettingsScreen(). 
+This is depending on which screen you want to add the translation to: **AppScreen()**, **HomeScreen()** or **SettingsScreen()**. 
 
-For this app, we only have the HomeScreen() but will use all three label models in it.
+For this app, we only have the **HomeScreen()** but will use all three label models in it.
 
 ### Step 1:
-For this example go to labels_app_model.dart, add a variable to the model.
+For this example go to **labels_app_model.dart**, add a **variable** to the model.
 <pre lang="javascript"><code>
 final String title;
 </code></pre>
 
 ### Step 2:
-Then add the same variable to the toJson() function.
+Then add the same **variable** to the **toJson()** function.
 <pre lang="javascript"><code>
 Map<int, dynamic> toJson() {
     return {
@@ -29,13 +29,13 @@ Map<int, dynamic> toJson() {
 </code></pre>
 
 ### Step 3:
-Finally add the variable to the class with the "required" syntax.
+Finally add the **variable** to the class with the **required** syntax.
 <pre lang="javascript"><code>
 const LabelsAppModel({
     required this.title,
   });
 </code></pre>
-The "required" syntax will create the first MAGIC, where it will show errors in labels.dart and locales.dart files.
+The **required** syntax will create the first **MAGIC**, where it will show errors in **labels.dart** and **locales.dart** files.
 This error is created from the polymorphism of the classes by using the LabelsAppModel() in both of this files.
 The error is a form of reminder for the developer to add in the the relevant key-value pair for the translation.
 
