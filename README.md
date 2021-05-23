@@ -15,9 +15,11 @@ For this example go to labels_app_model.dart, add a variable to the model.
 
 ### Step 2:
 Then add the same variable to the toJson() function.
+<pre lang="javascript"><code>
+Map<int, dynamic> toJson() {
+    return {
+      1: title,
+    };
+  }
+</code></pre>
 
-> Map<int, dynamic> toJson() {
->     return {
->       1: title,
->     };
->   }
