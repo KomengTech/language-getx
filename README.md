@@ -29,7 +29,9 @@ Map<int, dynamic> toJson() {
 </code></pre>
 
 ### Step 3:
-For this example go to labels_app_model.dart, add a variable to the model.
+Finally add the variable to the class with the "required" syntax.
 <pre lang="javascript"><code>
-final String title;
+const LabelsAppModel({
+    required this.title,
+  });
 </code></pre>
