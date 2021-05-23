@@ -16,6 +16,7 @@ For this app, we only have the **HomeScreen()** but will use all three label mod
 For this example go to **labels_app_model.dart**, add a **variable** to the model.
 <pre lang="javascript"><code>
 labels_app_model.dart
+
 final String title;
 </code></pre>
 
@@ -23,6 +24,7 @@ final String title;
 Then add the same **variable** to the **toJson()** function.
 <pre lang="javascript"><code>
 labels_app_model.dart
+
 Map<int, dynamic> toJson() {
     return {
       1: title,
@@ -33,6 +35,8 @@ Map<int, dynamic> toJson() {
 ### Step 3:
 Finally add the **variable** to the class with the **"required"** syntax.
 <pre lang="javascript"><code>
+labels_app_model.dart
+
 const LabelsAppModel({
     required this.title,
   });
@@ -45,6 +49,7 @@ The error is a form of reminder for the developer to add in the the relevant **k
 Go to **labels.dart** file in the **translations folder** and fix the error by adding the **"key"** for the translation.
 <pre lang="javascript"><code>
 labels.dart
+
 static const LabelsAppModel app = const LabelsAppModel(
     title: 'app_title',
   );
@@ -53,6 +58,8 @@ static const LabelsAppModel app = const LabelsAppModel(
 ### Step 3.2:
 Go to **locales.dart** file in the **translations folder** and fix the error by adding the **"value"** for the translation.
 <pre lang="javascript"><code>
+locales.dart
+
 static Map<String, String> en = LocaleModel(
     app: LabelsAppModel(
       title: 'Language GetX',
@@ -74,6 +81,8 @@ static Map<String, String> pt = LocaleModel(
 
 The **toJson()** for the **LocaleModel()**: **locale_model.dart** in the **models folder**, is the second **MAGIC** where it links the **"key"** in the **labels.dart** file and the **"value"** in the **locales.dart** file into a **MAP {key: value}** for the translation to happen in **app_translation.dart** that is in the **translations folder**.
 <pre lang="javascript"><code>
+locale_model.dart
+
 Map<String, String> toJson() {
     var data = <String, String>{};
 
@@ -87,4 +96,53 @@ Map<String, String> toJson() {
 
     return data;
   }
+</code></pre>
+
+<pre lang="javascript"><code>
+app_translation.dart
+
+class AppTranslation {
+  static Map<String, Map<String, String>> translations = {
+    LanguageCode.kEnglish: Locales.en,
+    LanguageCode.kChinese: Locales.zh,
+    LanguageCode.kPortuguese: Locales.pt,
+  };
+}
+</code></pre>
+### Adding additional tranlation model
+To add another label model you can add the model in the locale_model.dart file. For example adding a labels home model:
+<pre lang="javascript"><code>
+locale_model.dart
+
+class LocaleModel {
+  LocaleModel({
+    required this.app,
+    required this.home,
+  });
+
+  final LabelsAppModel app;
+  final LabelsHomeModel home;
+
+  Map<String, String> toJson() {
+    var data = <String, String>{};
+
+    Labels.app.toJson().forEach((keyLabels, valueLabels) {
+      app.toJson().forEach((key, value) {
+        if (keyLabels == key) {
+          data.putIfAbsent(valueLabels, () => value);
+        }
+      });
+    });
+
+    Labels.home.toJson().forEach((keyLabels, valueLabels) {
+      home.toJson().forEach((key, value) {
+        if (keyLabels == key) {
+          data.putIfAbsent(valueLabels, () => value);
+        }
+      });
+    });
+
+    return data;
+  }
+}
 </code></pre>
