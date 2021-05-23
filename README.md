@@ -163,7 +163,7 @@ class HomeScreen extends StatelessWidget {
 </code></pre>
 
 ## Adding Additional Translation Model:
-To add another label model you can add the model in the **locale_model.dart** file. For example adding a labels home model:
+To add another label model you can add the model in the **locale_model.dart** file. For example adding a **LabelsHomeModel()**:
 <pre lang="javascript"><code>
 locale_model.dart
 
