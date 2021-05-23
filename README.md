@@ -1,7 +1,9 @@
 # Getting Started
 
 A Language Translations Management App using GetX to support the development process. 
+
 Added some polymorphism in the classes for error checking management for the translations files. 
+
 This App UI design follows a Settings Screen.
 
 ## Setup:
