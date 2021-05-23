@@ -15,12 +15,14 @@ For this app, we only have the **HomeScreen()** but will use all three label mod
 ### Step 1:
 For this example go to **labels_app_model.dart**, add a **variable** to the model.
 <pre lang="javascript"><code>
+labels_app_model.dart
 final String title;
 </code></pre>
 
 ### Step 2:
 Then add the same **variable** to the **toJson()** function.
 <pre lang="javascript"><code>
+labels_app_model.dart
 Map<int, dynamic> toJson() {
     return {
       1: title,
@@ -42,6 +44,7 @@ The error is a form of reminder for the developer to add in the the relevant **k
 ### Step 3.1:
 Go to **labels.dart** file in the **translations folder** and fix the error by adding the **"key"** for the translation.
 <pre lang="javascript"><code>
+labels.dart
 static const LabelsAppModel app = const LabelsAppModel(
     title: 'app_title',
   );
