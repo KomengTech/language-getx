@@ -35,3 +35,36 @@ const LabelsAppModel({
     required this.title,
   });
 </code></pre>
+The "required" syntax will create the first magic, where it will show errors in labels.dart and locales.dart files.
+This error is created from the polymorphism of the classes by using the LabelsAppModel() in both of this files.
+The error is a form of reminder for the developer to add in the the relevant key-value pair for the translation.
+
+### Step 3.1:
+Go to labels.dart file in the translations folder and fix the error by adding the "key" for the translation.
+<pre lang="javascript"><code>
+static const LabelsAppModel app = const LabelsAppModel(
+    title: 'app_title',
+  );
+</code></pre>
+
+### Step 3.2:
+Go to locales.dart file in the translations folder and fix the error by adding the "value" for the translation.
+<pre lang="javascript"><code>
+static Map<String, String> en = LocaleModel(
+    app: LabelsAppModel(
+      title: 'Language GetX',
+    ),
+  ).toJson();
+    
+static Map<String, String> zh = LocaleModel(
+    app: LabelsAppModel(
+      title: '语 GetX',
+    ),
+ ).toJson();
+    
+static Map<String, String> pt = LocaleModel(
+    app: LabelsAppModel(
+      title: 'Língua GetX',
+    ),
+ ).toJson();
+</code></pre>
