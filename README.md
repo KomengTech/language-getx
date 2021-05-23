@@ -109,8 +109,8 @@ class AppTranslation {
   };
 }
 </code></pre>
-### Adding additional tranlation model
-To add another label model you can add the model in the locale_model.dart file. For example adding a labels home model:
+### Adding additional translation model
+To add another label model you can add the model in the **locale_model.dart** file. For example adding a labels home model:
 <pre lang="javascript"><code>
 locale_model.dart
 
