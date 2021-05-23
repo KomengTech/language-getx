@@ -1,10 +1,14 @@
 # Getting Started
 
-An In-App Static Translation Management App using GetX to support the development process. 
+A Translation Management App using GetX to support the development process and a Settings Screen UI design. 
 
 Added some polymorphism in the classes for error checking management for the translations files. 
 
-This App UI design follows a Settings Screen.
+This translation management is meant for bigger app with multiple screens as you can tag each screen to a translation model.
+
+For example if you have 3 screens: **AppScreen()**, **HomeScreen()** or **SettingsScreen()**. 
+
+You can tag each translation model to the separate screens: **labels_app_model.dart** or **labels_home_model.dart** or **labels_settings_model.dart** in the **models folder**.
 
 ## Setup:
 Setup by adding **GetMaterialApp()** in the **main.dart** and **AppTranslation()** in the **app_translation.dart**. This app will have three translations.
@@ -40,11 +44,7 @@ class AppTranslation {
 ## Adding Translation:
 To add a new translation is a **3 Step Process**. 
 
-You start by going to either the **labels_app_model.dart** or **labels_home_model.dart** or **labels_settings_model.dart** in the **models folder**.
-
-This is depending on which screen you want to add the translation to: **AppScreen()**, **HomeScreen()** or **SettingsScreen()**. 
-
-For this app, we only have the **HomeScreen()** but will use all three label models in it.
+For this app, we only have the **HomeScreen()** but will use all three translation models in it.
 
 ### Step 1:
 For this example go to **labels_app_model.dart**, add a **variable** to the model.
