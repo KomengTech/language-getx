@@ -35,7 +35,7 @@ const LabelsAppModel({
     required this.title,
   });
 </code></pre>
-The "required" syntax will create the first magic, where it will show errors in labels.dart and locales.dart files.
+The "required" syntax will create the first MAGIC, where it will show errors in labels.dart and locales.dart files.
 This error is created from the polymorphism of the classes by using the LabelsAppModel() in both of this files.
 The error is a form of reminder for the developer to add in the the relevant key-value pair for the translation.
 
@@ -67,4 +67,21 @@ static Map<String, String> pt = LocaleModel(
       title: 'Língua GetX',
     ),
  ).toJson();
+</code></pre>
+
+The toJson() for the LocaleModel(): locale_model.dart in the models folder, is the second MAGIC where it links the "key" in the labels.dart file and the "value" in the locales.dart file into a MAP for the translation to happen in app_translation.dart that is in the translations folder.
+<pre lang="javascript"><code>
+Map<String, String> toJson() {
+    var data = <String, String>{};
+
+    Labels.app.toJson().forEach((keyLabels, valueLabels) {
+      app.toJson().forEach((key, value) {
+        if (keyLabels == key) {
+          data.putIfAbsent(valueLabels, () => value);
+        }
+      });
+    });
+
+    return data;
+  }
 </code></pre>
